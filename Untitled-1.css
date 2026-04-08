@@ -910,3 +910,50 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+/* ========== PERBAIKAN TEKS KETUTUP NAVBAR DI HP ========== */
+
+@media (max-width: 768px) {
+    /* Hero section dikasih padding atas yang cukup */
+    .hero {
+        padding-top: 100px !important;
+        min-height: auto;
+    }
+    
+    /* Tambahan space untuk konten hero */
+    .hero-content {
+        margin-top: 20px;
+    }
+    
+    /* Hero title lebih kecil biar muat */
+    .hero h1 {
+        font-size: 1.4rem !important;
+        margin-top: 10px;
+    }
+    
+    /* Subtitle */
+    .hero p {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Untuk HP yang lebih kecil */
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 120px !important;
+    }
+    
+    .hero h1 {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Untuk landscape mode */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        padding-top: 80px !important;
+    }
+    
+    .hero h1 {
+        font-size: 1.2rem !important;
+    }
+}
