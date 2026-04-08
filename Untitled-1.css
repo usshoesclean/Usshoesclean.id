@@ -111,108 +111,40 @@ body {
 /* ========== HERO SECTION ========== */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(rgba(30, 60, 114, 0.3), rgba(0, 0, 0, 0.4)), 
-                url('Background.png');
+    background-image: url('Background.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--white);
+    color: white;
     padding: 100px 20px 60px;
     position: relative;
-    overflow: hidden;
 }
 
-.hero::before {
+/* Tambahan overlay agar teks tetap terbaca */
+.hero::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') bottom no-repeat;
-    background-size: cover;
-    opacity: 0.2;
-    pointer-events: none;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    opacity: 0.9;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: var(--transition);
-    display: inline-block;
-}
-
-.btn-primary {
-    background: var(--primary);
-    color: var(--white);
-}
-
-.btn-primary:hover {
-    background: var(--primary-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(255,107,53,0.3);
-}
-
-.btn-outline {
-    border: 2px solid var(--white);
-    color: var(--white);
-}
-
-.btn-outline:hover {
-    background: var(--white);
-    color: var(--secondary);
-    transform: translateY(-3px);
+    z-index: 2;
 }
 
 .hero-stats {
     position: relative;
-    z-index: 1;
-    display: flex;
-    gap: 4rem;
-    margin-top: 4rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.stat h3 {
-    font-size: 2rem;
-    color: var(--primary);
-}
-
-.stat p {
-    margin: 0;
-    font-size: 0.9rem;
+    z-index: 2;
 }
 /* ========== LAYANAN SECTION ========== */
 .layanan {
