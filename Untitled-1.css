@@ -857,3 +857,148 @@ body {
         min-height: 200px;
     }
 }
+/* ========== PERBAIKAN HEADER & NAVBAR UNTUK HP ========== */
+
+/* Untuk semua device di bawah 768px */
+@media (max-width: 768px) {
+    /* Navbar jadi tidak fixed di HP (biar ga nabrak) */
+    .navbar {
+        position: relative;
+        top: 0;
+        background: white;
+    }
+    
+    /* Hero section dikasih padding top lebih kecil */
+    .hero {
+        padding-top: 30px !important;
+        min-height: auto;
+    }
+    
+    /* Container navbar */
+    .nav-container {
+        flex-direction: column;
+        padding: 12px 15px;
+        gap: 10px;
+    }
+    
+    /* Logo lebih kecil */
+    .logo {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    /* Menu wrap ke bawah */
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Link menu lebih kecil */
+    .nav-menu a {
+        font-size: 0.8rem;
+        padding: 5px 0;
+        display: inline-block;
+    }
+    
+    /* Hero content spacing */
+    .hero-content {
+        margin-top: 20px;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero p {
+        font-size: 0.85rem;
+        padding: 0 15px;
+    }
+    
+    /* Tombol di hero */
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .btn {
+        width: 80%;
+        max-width: 200px;
+        text-align: center;
+    }
+}
+
+/* Untuk HP kecil (max 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        position: relative;
+    }
+    
+    .nav-container {
+        padding: 10px 12px;
+    }
+    
+    .logo {
+        font-size: 1rem;
+    }
+    
+    .nav-menu {
+        gap: 10px;
+    }
+    
+    .nav-menu a {
+        font-size: 0.7rem;
+    }
+    
+    .hero {
+        padding-top: 20px !important;
+    }
+    
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+    
+    .hero p {
+        font-size: 0.75rem;
+    }
+    
+    .hero-stats {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .stat h3 {
+        font-size: 1rem;
+    }
+    
+    .stat p {
+        font-size: 0.6rem;
+    }
+}
+
+/* Untuk landscape mode HP */
+@media (max-width: 768px) and (orientation: landscape) {
+    .navbar {
+        position: relative;
+    }
+    
+    .hero {
+        padding-top: 20px !important;
+        min-height: auto;
+    }
+    
+    .nav-menu {
+        gap: 15px;
+    }
+    
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+    
+    .hero p {
+        font-size: 0.8rem;
+    }
+}
