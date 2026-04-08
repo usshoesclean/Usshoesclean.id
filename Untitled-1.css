@@ -601,87 +601,126 @@ body {
     font-weight: 400;
 }
 
-/* ========== RESPONSIVE ========== */
-@media (max-width: 992px) {
-    .kontak-wrapper {
-        grid-template-columns: 1fr;
-    }
-    
-    .kontak-map {
-        min-height: 350px;
-    }
-    
-    .kontak-map iframe {
-        min-height: 350px;
-    }
-}
-
+/* ========== RESPONSIVE HP ========== */
 @media (max-width: 768px) {
+    /* Navbar tidak fixed di HP */
+    .navbar {
+        position: relative;
+        top: 0;
+        background: white;
+    }
+    
+    /* Body tidak perlu padding top */
+    body {
+        padding-top: 0;
+    }
+    
+    /* Container navbar */
+    .nav-container {
+        flex-direction: column;
+        padding: 12px 15px;
+        gap: 10px;
+    }
+    
+    /* Logo */
+    .logo {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    /* Menu menu */
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .nav-menu a {
+        font-size: 0.8rem;
+        padding: 5px 0;
+    }
+    
+    /* Hero section */
     .hero {
-        padding: 80px 15px 40px;
+        padding: 40px 15px 40px !important;
         min-height: auto;
     }
     
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem !important;
     }
     
     .hero p {
-        font-size: 0.9rem;
-        padding: 0 10px;
+        font-size: 0.85rem !important;
+        padding: 0 15px;
     }
     
+    /* Tombol */
     .hero-buttons {
-        flex-direction: row;
-        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
     
     .btn {
-        padding: 8px 20px;
+        width: 80%;
+        max-width: 200px;
+        text-align: center;
+        padding: 10px 20px;
         font-size: 0.8rem;
     }
     
+    /* Statistik */
     .hero-stats {
         gap: 1.5rem;
         margin-top: 2rem;
     }
     
     .stat h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     
     .stat p {
         font-size: 0.7rem;
     }
     
+    /* Section title */
     .section-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     
     .section-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        margin-bottom: 2rem;
     }
     
+    /* Kontak wrapper */
     .kontak-wrapper {
         grid-template-columns: 1fr;
     }
     
-    .nav-menu {
-        gap: 1rem;
+    .kontak-info {
+        padding: 20px;
     }
     
-    .paket-card.premium {
-        transform: scale(1);
+    .kontak-info h3 {
+        font-size: 1.3rem;
     }
     
-    .paket-card.premium:hover {
-        transform: translateY(-10px);
+    .info-item {
+        font-size: 0.8rem;
     }
     
-    .container {
-        padding: 0 15px;
+    .social-link {
+        padding: 8px 16px;
+        font-size: 0.75rem;
     }
     
+    .kontak-map {
+        min-height: 250px;
+    }
+    
+    /* Layanan grid */
     .layanan-grid {
         gap: 15px;
     }
@@ -694,67 +733,92 @@ body {
         font-size: 2rem;
     }
     
+    .layanan-card h3 {
+        font-size: 0.9rem;
+    }
+    
+    .layanan-card p {
+        font-size: 0.7rem;
+    }
+    
+    .price {
+        font-size: 0.9rem;
+    }
+    
+    /* Paket grid */
     .paket-grid {
         gap: 15px;
     }
     
+    .paket-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .paket-price {
+        font-size: 1.5rem;
+    }
+    
+    .paket-features li {
+        font-size: 0.7rem;
+    }
+    
+    .btn-pesan {
+        font-size: 0.75rem;
+    }
+    
+    /* Testimonial */
     .testimonial-grid {
         gap: 15px;
     }
     
-    .kontak-info {
-        padding: 20px;
+    .testi-card {
+        padding: 15px;
     }
     
-    .kontak-info h3 {
-        font-size: 1.3rem;
+    .testi-card p {
+        font-size: 0.75rem;
     }
     
-    .info-item {
-        font-size: 0.85rem;
-    }
-    
-    .social-link {
-        padding: 8px 16px;
-        font-size: 12px;
-    }
-    
-    .kontak-map {
-        min-height: 250px;
-    }
-    
+    /* Footer */
     .footer {
         padding: 40px 0 20px;
     }
     
     .footer-content {
-        gap: 1.5rem;
         text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-bottom {
+        font-size: 0.7rem;
     }
 }
 
+/* HP kecil (max 480px) */
 @media (max-width: 480px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 0.5rem;
+    .logo {
+        font-size: 1rem;
+    }
+    
+    .nav-menu {
+        gap: 8px;
+    }
+    
+    .nav-menu a {
+        font-size: 0.7rem;
     }
     
     .hero h1 {
-        font-size: 1.4rem;
+        font-size: 1.3rem !important;
     }
     
     .hero p {
-        font-size: 0.8rem;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
+        font-size: 0.75rem !important;
     }
     
     .btn {
-        width: 80%;
-        max-width: 200px;
+        width: 90%;
+        font-size: 0.75rem;
     }
     
     .hero-stats {
@@ -762,11 +826,15 @@ body {
     }
     
     .stat h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+    
+    .stat p {
+        font-size: 0.6rem;
     }
     
     .section-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     
     .layanan-grid {
@@ -783,31 +851,19 @@ body {
     }
     
     .layanan-card h3 {
-        font-size: 0.8rem;
-    }
-    
-    .layanan-card p {
-        font-size: 0.65rem;
+        font-size: 0.75rem;
     }
     
     .price {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
     }
     
     .paket-card h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .paket-price {
-        font-size: 1.5rem;
-    }
-    
-    .paket-features li {
-        font-size: 0.7rem;
-    }
-    
-    .btn-pesan {
-        font-size: 0.7rem;
+        font-size: 1.2rem;
     }
     
     .kontak-info h3 {
@@ -822,27 +878,28 @@ body {
         padding: 6px 12px;
         font-size: 0.65rem;
     }
-    
-    .kontak-map {
-        min-height: 200px;
-    }
-    
-    .footer-bottom {
-        font-size: 0.7rem;
-    }
 }
 
+/* Landscape mode */
 @media (max-width: 768px) and (orientation: landscape) {
+    .navbar {
+        position: relative;
+    }
+    
     .hero {
-        padding: 60px 15px 30px;
+        padding: 30px 15px 30px !important;
     }
     
     .hero h1 {
-        font-size: 1.3rem;
+        font-size: 1.3rem !important;
     }
     
     .hero p {
-        font-size: 0.8rem;
+        font-size: 0.75rem !important;
+    }
+    
+    .nav-menu {
+        gap: 15px;
     }
     
     .layanan-grid {
@@ -851,154 +908,5 @@ body {
     
     .paket-grid {
         grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .kontak-map {
-        min-height: 200px;
-    }
-}
-/* ========== PERBAIKAN HEADER & NAVBAR UNTUK HP ========== */
-
-/* Untuk semua device di bawah 768px */
-@media (max-width: 768px) {
-    /* Navbar jadi tidak fixed di HP (biar ga nabrak) */
-    .navbar {
-        position: relative;
-        top: 0;
-        background: white;
-    }
-    
-    /* Hero section dikasih padding top lebih kecil */
-    .hero {
-        padding-top: 30px !important;
-        min-height: auto;
-    }
-    
-    /* Container navbar */
-    .nav-container {
-        flex-direction: column;
-        padding: 12px 15px;
-        gap: 10px;
-    }
-    
-    /* Logo lebih kecil */
-    .logo {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-    
-    /* Menu wrap ke bawah */
-    .nav-menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-        margin: 0;
-        padding: 0;
-    }
-    
-    /* Link menu lebih kecil */
-    .nav-menu a {
-        font-size: 0.8rem;
-        padding: 5px 0;
-        display: inline-block;
-    }
-    
-    /* Hero content spacing */
-    .hero-content {
-        margin-top: 20px;
-    }
-    
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-    
-    .hero p {
-        font-size: 0.85rem;
-        padding: 0 15px;
-    }
-    
-    /* Tombol di hero */
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-    
-    .btn {
-        width: 80%;
-        max-width: 200px;
-        text-align: center;
-    }
-}
-
-/* Untuk HP kecil (max 480px) */
-@media (max-width: 480px) {
-    .navbar {
-        position: relative;
-    }
-    
-    .nav-container {
-        padding: 10px 12px;
-    }
-    
-    .logo {
-        font-size: 1rem;
-    }
-    
-    .nav-menu {
-        gap: 10px;
-    }
-    
-    .nav-menu a {
-        font-size: 0.7rem;
-    }
-    
-    .hero {
-        padding-top: 20px !important;
-    }
-    
-    .hero h1 {
-        font-size: 1.3rem;
-    }
-    
-    .hero p {
-        font-size: 0.75rem;
-    }
-    
-    .hero-stats {
-        gap: 1rem;
-        margin-top: 1.5rem;
-    }
-    
-    .stat h3 {
-        font-size: 1rem;
-    }
-    
-    .stat p {
-        font-size: 0.6rem;
-    }
-}
-
-/* Untuk landscape mode HP */
-@media (max-width: 768px) and (orientation: landscape) {
-    .navbar {
-        position: relative;
-    }
-    
-    .hero {
-        padding-top: 20px !important;
-        min-height: auto;
-    }
-    
-    .nav-menu {
-        gap: 15px;
-    }
-    
-    .hero h1 {
-        font-size: 1.3rem;
-    }
-    
-    .hero p {
-        font-size: 0.8rem;
     }
 }
