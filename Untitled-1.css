@@ -12,7 +12,7 @@
     --primary-dark: #2a8a1c;
     --secondary: #1e3c72;
     --dark: #1a1a2e;
-    --light: #f8f9fa;
+    --light: #a7c0a9;
     --gray: #6c757d;
     --white: #ffffff;
     --shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -277,7 +277,7 @@ body {
 /* ========== PAKET SECTION ========== */
 .paket {
     padding: 80px 0;
-    background: var(--white);
+    background: var(--light);
 }
 
 .paket-grid {
@@ -378,7 +378,7 @@ body {
 /* ========== TESTIMONIAL ========== */
 .testimonial {
     padding: 80px 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    background: var(--light);
 }
 
 .testimonial-grid {
